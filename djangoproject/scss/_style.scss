@@ -2203,6 +2203,9 @@ h2 + .list-link-soup {
             border: 1px solid $gray-line;
             border-radius: 4px;
         }
+        &.hover-on {
+            display: inline-block;
+        }
         &.current-link {
             display: inline-block;
         }
@@ -2223,7 +2226,7 @@ h2 + .list-link-soup {
         }
     }
 
-    &:hover, .hover-on {
+    &:hover {
         pointer-events: auto;
         li {
             display: inline-block;

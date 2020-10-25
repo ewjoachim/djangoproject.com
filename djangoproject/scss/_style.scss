@@ -2185,8 +2185,18 @@ h2 + .list-link-soup {
 }
 
 #doc-versions, #doc-languages, #faq-link {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin: 0;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+
+    &.open {
+        li{
+            display: inline-block;
+            &.current {
+                border: 1px solid $green-light;
+            }
+        }
+    }
 
     li {
         display: none;
@@ -2204,9 +2214,7 @@ h2 + .list-link-soup {
             border-radius: 4px;
             cursor: pointer;
         }
-        &.hover-on {
-            display: inline-block;
-        }
+
         &.current-link {
             display: inline-block;
         }
@@ -2229,6 +2237,8 @@ h2 + .list-link-soup {
 
     &:hover {
         pointer-events: auto;
+        padding: 2em 0;
+        margin: -1.75em 0;
         li {
             display: inline-block;
         }
